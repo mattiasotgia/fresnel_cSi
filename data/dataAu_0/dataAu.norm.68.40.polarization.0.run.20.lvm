@@ -1,0 +1,44 @@
+LabVIEW Measurement	
+Writer_Version	2
+Reader_Version	2
+Separator	Tab
+Decimal_Separator	.
+Multi_Headings	Yes
+X_Columns	No
+Time_Pref	Relative
+Operator	stud40
+Description	DATA_AQ
+Date	2023/05/30
+Time	17:09:12.2998590469360351563
+***End_of_Header***	
+	
+Channels	1	
+Samples	20	
+Date	1904/01/01	
+Time	01:00:00	
+X_Dimension	Time	
+X0	0.0000000000000000E+0	
+Delta_X	1.000000	
+***End_of_Header***		
+X_Value	Untitled	Comment
+	3.247658
+	3.235556
+	3.241191
+	3.240373
+	3.240761
+	3.232695
+	3.223101
+	3.225725
+	3.222747
+	3.222063
+	3.215116
+	3.201820
+	3.200262
+	3.189315
+	3.179084
+	3.170745
+	3.165422
+	3.163986
+	3.162009
+	3.158250
+
