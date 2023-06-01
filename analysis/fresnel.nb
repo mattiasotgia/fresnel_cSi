@@ -1,0 +1,4227 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    160612,       4219]
+NotebookOptionsPosition[    157648,       4163]
+NotebookOutlinePosition[    158043,       4179]
+CellTagsIndexPosition[    158000,       4176]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"N0", "=", "1"}], " ", 
+  RowBox[{"(*", "Air", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"N1", "=", "1.4607"}], " ", 
+  RowBox[{"(*", 
+   SubscriptBox["SiO", "2"], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"N2", "=", 
+   RowBox[{"4.1360", "+", 
+    RowBox[{"\[ImaginaryI]", " ", "0.010205"}]}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"c", "-", "Si"}], "*)"}]}], "\[LineSeparator]"}], "Title",
+ CellChangeTimes->{{3.8945948082078876`*^9, 3.894594905823188*^9}, 
+   3.894598922955388*^9, 
+   3.894599082168192*^9},ExpressionUUID->"2f4d6d4f-b867-4695-861c-\
+92b941ca1b82"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox["1", TraditionalForm]], "Input",
+ CellChangeTimes->{
+  3.894599083702548*^9},ExpressionUUID->"20fc0b46-eacb-49e1-98d4-\
+5d1a70337448"],
+
+Cell[BoxData[
+ FormBox["1.4607`", TraditionalForm]], "Output",
+ CellChangeTimes->{3.8945949075567417`*^9, 3.894595365852706*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"4d472954-80ff-4d06-98da-9bf13162cc7f"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"4.136`", "\[VeryThinSpace]", "+", 
+   RowBox[{"0.010205`", " ", "\[ImaginaryI]"}]}], TraditionalForm]], "Output",\
+
+ CellChangeTimes->{3.8945949075567417`*^9, 3.8945953658547373`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"e948de36-2b58-44cf-a351-5295504cb3fa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"r01p", "[", "\[Theta]_", "]"}], "=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"N1", " ", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "-", 
+    RowBox[{"N0", " ", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["N0", "N1"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ")"}], "2"]}], "]"}]}]}], 
+   RowBox[{
+    RowBox[{"N1", " ", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "+", 
+    RowBox[{"N0", " ", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["N0", "N1"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ")"}], "2"]}], 
+      "]"}]}]}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r12p", "[", "\[Theta]_", "]"}], "=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"N2", " ", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "-", 
+    RowBox[{"N1", " ", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["N1", "N2"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ")"}], "2"]}], "]"}]}]}], 
+   RowBox[{
+    RowBox[{"N2", " ", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "+", 
+    RowBox[{"N1", " ", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["N1", "N2"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ")"}], "2"]}], 
+      "]"}]}]}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r01s", "[", "\[Theta]_", "]"}], "=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"N0", " ", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "-", 
+    RowBox[{"N1", " ", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["N0", "N1"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ")"}], "2"]}], "]"}]}]}], 
+   RowBox[{
+    RowBox[{"N1", " ", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "+", 
+    RowBox[{"N0", " ", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["N0", "N1"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ")"}], "2"]}], 
+      "]"}]}]}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r12s", "[", "\[Theta]_", "]"}], "=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"N1", " ", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "-", 
+    RowBox[{"N2", " ", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["N1", "N2"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ")"}], "2"]}], "]"}]}]}], 
+   RowBox[{
+    RowBox[{"N1", " ", 
+     RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "+", 
+    RowBox[{"N2", " ", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["N1", "N2"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}]}], ")"}], "2"]}], 
+      "]"}]}]}]]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.894594914363442*^9, 3.894594957000547*^9}, {
+  3.894595052328426*^9, 3.8945952611116323`*^9}, {3.8945953356232557`*^9, 
+  3.894595348496193*^9}, {3.8945957297338743`*^9, 3.8945957337674217`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"e9405c08-ef37-4319-a01d-cbb41ac4d63b"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    RowBox[{"N1", " ", 
+     RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+    RowBox[{"N0", " ", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["N0", "2"], " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+        SuperscriptBox["N1", "2"]]}]]}]}], 
+   RowBox[{
+    RowBox[{"N0", " ", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["N0", "2"], " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+        SuperscriptBox["N1", "2"]]}]]}], "+", 
+    RowBox[{"N1", " ", 
+     RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.894595734041027*^9, 3.8945989306309*^9, 
+  3.894599087970673*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"ed66521c-70c6-4588-9d8b-4a811153766e"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    RowBox[{"N2", " ", 
+     RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+    RowBox[{"N1", " ", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["N1", "2"], " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+        SuperscriptBox["N2", "2"]]}]]}]}], 
+   RowBox[{
+    RowBox[{"N1", " ", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["N1", "2"], " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+        SuperscriptBox["N2", "2"]]}]]}], "+", 
+    RowBox[{"N2", " ", 
+     RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.894595734041027*^9, 3.8945989306309*^9, 
+  3.8945990879857807`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"204f7f91-2b77-4249-93a0-275574d7e86c"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    RowBox[{"N0", " ", 
+     RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+    RowBox[{"N1", " ", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["N0", "2"], " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+        SuperscriptBox["N1", "2"]]}]]}]}], 
+   RowBox[{
+    RowBox[{"N0", " ", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["N0", "2"], " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+        SuperscriptBox["N1", "2"]]}]]}], "+", 
+    RowBox[{"N1", " ", 
+     RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.894595734041027*^9, 3.8945989306309*^9, 
+  3.894599087988285*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"616acc4d-4f0f-45dc-b918-037fab8b9e3d"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    RowBox[{"N1", " ", 
+     RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+    RowBox[{"N2", " ", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["N1", "2"], " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+        SuperscriptBox["N2", "2"]]}]]}]}], 
+   RowBox[{
+    RowBox[{"N2", " ", 
+     SqrtBox[
+      RowBox[{"1", "-", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["N1", "2"], " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+        SuperscriptBox["N2", "2"]]}]]}], "+", 
+    RowBox[{"N1", " ", 
+     RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.894595734041027*^9, 3.8945989306309*^9, 
+  3.894599087990728*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"16a389f5-7438-4ed5-b15f-502bc2211890"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Beta]", "[", "\[Theta]", "]"}], "=", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", "\[Pi]"}], "\[Lambda]"], "d", " ", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{
+     SuperscriptBox["N1", "2"], "-", 
+     RowBox[{
+      SuperscriptBox["N0", "2"], 
+      RowBox[{"Sin", "[", "\[Theta]", "]"}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.894595380344784*^9, 3.8945954134588213`*^9}, {
+   3.894595445445133*^9, 3.894595505451084*^9}, 3.894595737449312*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"3ba7b9b3-39a7-4761-a90c-2e257114ba57"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{"2", " ", "\[Pi]", " ", "d", " ", 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox["N1", "2"], "-", 
+      RowBox[{
+       SuperscriptBox["N0", "2"], " ", 
+       RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.8945957381790524`*^9, 3.894598941115678*^9, 
+  3.894599091723516*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"33a0783b-1fd4-4cae-a775-ec75b0ad2f1f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"r3PHp", "[", "\[Theta]_", "]"}], "=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"r01p", "[", "\[Theta]", "]"}], "+", 
+    RowBox[{
+     RowBox[{"r12p", "[", "\[Theta]", "]"}], " ", 
+     RowBox[{"Exp", "[", 
+      RowBox[{"\[ImaginaryI]", " ", "2", 
+       RowBox[{"\[Beta]", "[", "\[Theta]", "]"}]}], "]"}], " "}]}], 
+   RowBox[{"1", "+", 
+    RowBox[{
+     RowBox[{"r01p", "[", "\[Theta]", "]"}], 
+     RowBox[{"r12p", "[", "\[Theta]", "]"}], 
+     RowBox[{"Exp", "[", 
+      RowBox[{"\[ImaginaryI]", " ", "2", " ", 
+       RowBox[{"\[Beta]", "[", "\[Theta]", "]"}]}], 
+      "]"}]}]}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r3PHs", "[", "\[Theta]_", "]"}], "=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"r01s", "[", "\[Theta]", "]"}], "+", 
+    RowBox[{
+     RowBox[{"r12s", "[", "\[Theta]", "]"}], " ", 
+     RowBox[{"Exp", "[", 
+      RowBox[{"\[ImaginaryI]", " ", "2", 
+       RowBox[{"\[Beta]", "[", "\[Theta]", "]"}]}], "]"}], " "}]}], 
+   RowBox[{"1", "+", 
+    RowBox[{
+     RowBox[{"r01s", "[", "\[Theta]", "]"}], 
+     RowBox[{"r12s", "[", "\[Theta]", "]"}], 
+     RowBox[{"Exp", "[", 
+      RowBox[{"\[ImaginaryI]", " ", "2", " ", 
+       RowBox[{"\[Beta]", "[", "\[Theta]", "]"}]}], "]"}]}]}]]}]}], "Input",
+ CellChangeTimes->{{3.894595278747486*^9, 3.8945953330499973`*^9}, {
+  3.894595515407528*^9, 3.894595592457985*^9}, {3.894595711724298*^9, 
+  3.894595742330039*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"b4be705d-35c5-43c2-b4a6-0d6f50e71e38"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"N1", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+      RowBox[{"N0", " ", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["N0", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+          SuperscriptBox["N1", "2"]]}]]}]}], 
+     RowBox[{
+      RowBox[{"N0", " ", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["N0", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+          SuperscriptBox["N1", "2"]]}]]}], "+", 
+      RowBox[{"N1", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N2", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"N1", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "d", " ", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox["N1", "2"], "-", 
+           RowBox[{
+            SuperscriptBox["N0", "2"], " ", 
+            RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]]}], 
+     RowBox[{
+      RowBox[{"N1", " ", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["N1", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+          SuperscriptBox["N2", "2"]]}]]}], "+", 
+      RowBox[{"N2", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], 
+   RowBox[{"1", "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"N0", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N0", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N2", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"N1", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "d", " ", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox["N1", "2"], "-", 
+           RowBox[{
+            SuperscriptBox["N0", "2"], " ", 
+            RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]]}], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N0", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N0", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N1", "2"]]}]]}], "+", 
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N1", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N2", "2"]]}]]}], "+", 
+        RowBox[{"N2", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]]}]], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.8945957427485447`*^9, 3.8945989446052856`*^9, 
+  3.894599093187924*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"ac112eeb-31aa-494e-8f89-aa7de33dce76"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"N0", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+      RowBox[{"N1", " ", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["N0", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+          SuperscriptBox["N1", "2"]]}]]}]}], 
+     RowBox[{
+      RowBox[{"N0", " ", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["N0", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+          SuperscriptBox["N1", "2"]]}]]}], "+", 
+      RowBox[{"N1", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"N2", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "d", " ", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox["N1", "2"], "-", 
+           RowBox[{
+            SuperscriptBox["N0", "2"], " ", 
+            RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]]}], 
+     RowBox[{
+      RowBox[{"N2", " ", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["N1", "2"], " ", 
+           RowBox[{
+            SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+          SuperscriptBox["N2", "2"]]}]]}], "+", 
+      RowBox[{"N1", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], 
+   RowBox[{"1", "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N0", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"N1", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N0", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"N2", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+      SuperscriptBox["\[ExponentialE]", 
+       FractionBox[
+        RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "d", " ", 
+         SqrtBox[
+          RowBox[{
+           SuperscriptBox["N1", "2"], "-", 
+           RowBox[{
+            SuperscriptBox["N0", "2"], " ", 
+            RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]]}], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N0", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N0", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N1", "2"]]}]]}], "+", 
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"N2", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N2", "2"]]}]]}], "+", 
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]]}]], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.8945957427485447`*^9, 3.8945989446052856`*^9, 
+  3.894599093220649*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"06004d49-3ade-4121-8904-8fa75211541e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Rp", "[", "\[Theta]_", "]"}], "=", 
+  RowBox[{
+   RowBox[{"r3PHp", "[", "\[Theta]", "]"}], 
+   RowBox[{"Conjugate", "[", 
+    RowBox[{"r3PHp", "[", "\[Theta]", "]"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Rs", "[", "\[Theta]_", "]"}], "=", 
+  RowBox[{
+   RowBox[{"r3PHs", "[", "\[Theta]", "]"}], 
+   RowBox[{"Conjugate", "[", 
+    RowBox[{"r3PHs", "[", "\[Theta]", "]"}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.894595714217164*^9, 3.894595782787129*^9}, {
+  3.894598953123165*^9, 3.8945989629390087`*^9}, {3.894599060038547*^9, 
+  3.8945990656356*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"87129908-a4d9-4be6-9ddd-502025d09537"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"N0", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N0", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N1", "2"]]}]]}]}], 
+       RowBox[{
+        RowBox[{"N0", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N0", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N1", "2"]]}]]}], "+", 
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N2", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N1", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "d", " ", 
+           SqrtBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], "-", 
+             RowBox[{
+              SuperscriptBox["N0", "2"], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]]}], 
+       RowBox[{
+        RowBox[{"N1", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N2", "2"]]}]]}], "+", 
+        RowBox[{"N2", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}], " ", 
+    TemplateBox[{
+      RowBox[{"(", 
+        RowBox[{
+          FractionBox[
+           RowBox[{
+             RowBox[{"N1", " ", 
+               RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+             RowBox[{"N0", " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                   SuperscriptBox["N1", "2"]]}]]}]}], 
+           RowBox[{
+             RowBox[{
+               SqrtBox[
+                RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                   SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+             RowBox[{"N1", " ", 
+               RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+          FractionBox[
+           RowBox[{
+             SuperscriptBox["\[ExponentialE]", 
+              FractionBox[
+               RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+                 SqrtBox[
+                  RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], 
+               "\[Lambda]"]], " ", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"N2", " ", 
+                   RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                 RowBox[{"N1", " ", 
+                   SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+           RowBox[{
+             RowBox[{
+               SqrtBox[
+                RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                   SuperscriptBox["N2", "2"]]}]], " ", "N1"}], "+", 
+             RowBox[{"N2", " ", 
+               RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+     "Conjugate"]}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N0", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N2", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N1", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "d", " ", 
+           SqrtBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], "-", 
+             RowBox[{
+              SuperscriptBox["N0", "2"], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N0", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]]}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N1", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]]}], "+", 
+          RowBox[{"N2", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]]}], ")"}], " ", 
+    
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{
+        TemplateBox[{
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                  RowBox[{"N0", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{"N2", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                  RowBox[{"N1", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]},
+         "Conjugate"], " ", 
+        RowBox[{"exp", "(", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+            TemplateBox[{
+              RowBox[{"(", 
+                RowBox[{"d", " ", 
+                  SqrtBox[
+                   RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+             "Conjugate"]}], 
+           TemplateBox[{"\[Lambda]"},
+            "Conjugate"]]}], ")"}]}], 
+       RowBox[{
+        TemplateBox[{
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+              RowBox[{"N1", " ", 
+                RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+         "Conjugate"], " ", 
+        TemplateBox[{
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N1"}], "+", 
+              RowBox[{"N2", " ", 
+                RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+         "Conjugate"]}]]}], ")"}]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.8945957847128677`*^9, 3.8945989486734657`*^9, 
+  3.8945990267518377`*^9, 3.894599095402861*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"3abc80fc-5678-4834-a7ec-f9a7246e8b39"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        RowBox[{"N0", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"N1", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N0", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N1", "2"]]}]]}]}], 
+       RowBox[{
+        RowBox[{"N0", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N0", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N1", "2"]]}]]}], "+", 
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N2", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "d", " ", 
+           SqrtBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], "-", 
+             RowBox[{
+              SuperscriptBox["N0", "2"], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]]}], 
+       RowBox[{
+        RowBox[{"N2", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           FractionBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], " ", 
+             RowBox[{
+              SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+            SuperscriptBox["N2", "2"]]}]]}], "+", 
+        RowBox[{"N1", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}], " ", 
+    TemplateBox[{
+      RowBox[{"(", 
+        RowBox[{
+          FractionBox[
+           RowBox[{
+             RowBox[{"N0", " ", 
+               RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+             RowBox[{"N1", " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                   SuperscriptBox["N1", "2"]]}]]}]}], 
+           RowBox[{
+             RowBox[{
+               SqrtBox[
+                RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                   SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+             RowBox[{"N1", " ", 
+               RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+          FractionBox[
+           RowBox[{
+             SuperscriptBox["\[ExponentialE]", 
+              FractionBox[
+               RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+                 SqrtBox[
+                  RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], 
+               "\[Lambda]"]], " ", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"N1", " ", 
+                   RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                 RowBox[{"N2", " ", 
+                   SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+           RowBox[{
+             RowBox[{
+               SqrtBox[
+                RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                   SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+             RowBox[{"N1", " ", 
+               RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+     "Conjugate"]}], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N0", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N1", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N2", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+        SuperscriptBox["\[ExponentialE]", 
+         FractionBox[
+          RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", "d", " ", 
+           SqrtBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], "-", 
+             RowBox[{
+              SuperscriptBox["N0", "2"], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N0", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]]}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"N2", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]]}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]]}], ")"}], " ", 
+    
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{
+        TemplateBox[{
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{"N0", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                  RowBox[{"N1", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                  RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]},
+         "Conjugate"], " ", 
+        RowBox[{"exp", "(", 
+         RowBox[{"-", 
+          FractionBox[
+           RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+            TemplateBox[{
+              RowBox[{"(", 
+                RowBox[{"d", " ", 
+                  SqrtBox[
+                   RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+             "Conjugate"]}], 
+           TemplateBox[{"\[Lambda]"},
+            "Conjugate"]]}], ")"}]}], 
+       RowBox[{
+        TemplateBox[{
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+              RowBox[{"N1", " ", 
+                RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+         "Conjugate"], " ", 
+        TemplateBox[{
+          RowBox[{"(", 
+            RowBox[{
+              RowBox[{
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+              RowBox[{"N1", " ", 
+                RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+         "Conjugate"]}]]}], ")"}]}]], TraditionalForm]], "Output",
+ CellChangeTimes->{3.8945957847128677`*^9, 3.8945989486734657`*^9, 
+  3.8945990267518377`*^9, 3.8945990954435453`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"2968be83-0545-4c28-af9f-9a13c0969ad5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"Rs", "[", "\[Theta]", "]"}], ",", " ", "\[Theta]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.894599105398332*^9, 3.8945991141555862`*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"6d2815d4-cd22-433a-abdc-09ebcdac977f"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          RowBox[{"N0", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N1", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]]}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}], " ", 
+      RowBox[{
+       SuperscriptBox["Conjugate", "\[Prime]",
+        MultilineFunction->None], "(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          RowBox[{"N0", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N1", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]]}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", "d", " ", 
+           SuperscriptBox["\[ExponentialE]", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+              SqrtBox[
+               RowBox[{
+                SuperscriptBox["N1", "2"], "-", 
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+           " ", "\[Pi]", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+             RowBox[{"N2", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+           SuperscriptBox["N0", "2"]}], 
+          RowBox[{"\[Lambda]", " ", 
+           SqrtBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], "-", 
+             RowBox[{
+              SuperscriptBox["N0", "2"], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]]}], "-", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+               RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+               SuperscriptBox["N0", "3"]}], 
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{
+                   SuperscriptBox["N0", "2"], " ", 
+                   RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                  SuperscriptBox["N1", "2"]]}]]}]]}], "-", 
+            RowBox[{"N1", " ", 
+             RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N0", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N1", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]]}]}], ")"}]}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], "2"]], "+", 
+        FractionBox[
+         RowBox[{
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["N0", "2"], " ", 
+            RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+            RowBox[{"sin", "(", "\[Theta]", ")"}]}], 
+           RowBox[{"N1", " ", 
+            SqrtBox[
+             RowBox[{"1", "-", 
+              FractionBox[
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{
+                 SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+               SuperscriptBox["N1", "2"]]}]]}]], "-", 
+          RowBox[{"N0", " ", 
+           RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["N1", "2"], " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}], 
+             RowBox[{"N2", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]]}]], "-", 
+            RowBox[{"N1", " ", 
+             RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+               RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+               SuperscriptBox["N1", "2"]}], 
+              RowBox[{"N2", " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{
+                   SuperscriptBox["N1", "2"], " ", 
+                   RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                  SuperscriptBox["N2", "2"]]}]]}]]}], "-", 
+            RowBox[{
+             RowBox[{"sin", "(", "\[Theta]", ")"}], " ", "N1"}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], "2"]]}], 
+       ")"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+              TemplateBox[{
+                RowBox[{"(", 
+                  RowBox[{"d", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+               "Conjugate"]}], 
+             TemplateBox[{"\[Lambda]"},
+              "Conjugate"]]}]], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N0", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N1", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]},
+           "Conjugate"]}], 
+         RowBox[{
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"]}]], "+", "1"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N0", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N1", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]], "+", "1"}], 
+       ")"}]}], ")"}]}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      TemplateBox[{
+        RowBox[{"(", 
+          RowBox[{
+            FractionBox[
+             RowBox[{
+               RowBox[{"N0", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+               RowBox[{"N1", " ", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], 
+             RowBox[{
+               RowBox[{
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+               RowBox[{"N1", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+            FractionBox[
+             RowBox[{
+               SuperscriptBox["\[ExponentialE]", 
+                FractionBox[
+                 
+                 RowBox[{
+                  "4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+                   SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], 
+                 "\[Lambda]"]], " ", 
+               RowBox[{"(", 
+                 RowBox[{
+                   RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                   RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+             RowBox[{
+               RowBox[{
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+               RowBox[{"N1", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+       "Conjugate"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", "d", " ", 
+           SuperscriptBox["\[ExponentialE]", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+              SqrtBox[
+               RowBox[{
+                SuperscriptBox["N1", "2"], "-", 
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+           " ", "\[Pi]", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+             RowBox[{"N2", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+           SuperscriptBox["N0", "2"]}], 
+          RowBox[{"\[Lambda]", " ", 
+           SqrtBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], "-", 
+             RowBox[{
+              SuperscriptBox["N0", "2"], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]]}], "-", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+               RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+               SuperscriptBox["N0", "3"]}], 
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{
+                   SuperscriptBox["N0", "2"], " ", 
+                   RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                  SuperscriptBox["N1", "2"]]}]]}]]}], "-", 
+            RowBox[{"N1", " ", 
+             RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N0", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N1", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]]}]}], ")"}]}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], "2"]], "+", 
+        FractionBox[
+         RowBox[{
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["N0", "2"], " ", 
+            RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+            RowBox[{"sin", "(", "\[Theta]", ")"}]}], 
+           RowBox[{"N1", " ", 
+            SqrtBox[
+             RowBox[{"1", "-", 
+              FractionBox[
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{
+                 SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+               SuperscriptBox["N1", "2"]]}]]}]], "-", 
+          RowBox[{"N0", " ", 
+           RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["N1", "2"], " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}], 
+             RowBox[{"N2", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]]}]], "-", 
+            RowBox[{"N1", " ", 
+             RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+               RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+               SuperscriptBox["N1", "2"]}], 
+              RowBox[{"N2", " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{
+                   SuperscriptBox["N1", "2"], " ", 
+                   RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                  SuperscriptBox["N2", "2"]]}]]}]]}], "-", 
+            RowBox[{
+             RowBox[{"sin", "(", "\[Theta]", ")"}], " ", "N1"}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], "2"]]}], 
+       ")"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+              TemplateBox[{
+                RowBox[{"(", 
+                  RowBox[{"d", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+               "Conjugate"]}], 
+             TemplateBox[{"\[Lambda]"},
+              "Conjugate"]]}]], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N0", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N1", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]},
+           "Conjugate"]}], 
+         RowBox[{
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"]}]], "+", "1"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N0", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N1", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]], "+", "1"}], 
+       ")"}]}], ")"}]}], "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      TemplateBox[{
+        RowBox[{"(", 
+          RowBox[{
+            FractionBox[
+             RowBox[{
+               RowBox[{"N0", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+               RowBox[{"N1", " ", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], 
+             RowBox[{
+               RowBox[{
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+               RowBox[{"N1", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+            FractionBox[
+             RowBox[{
+               SuperscriptBox["\[ExponentialE]", 
+                FractionBox[
+                 
+                 RowBox[{
+                  "4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+                   SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], 
+                 "\[Lambda]"]], " ", 
+               RowBox[{"(", 
+                 RowBox[{
+                   RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                   RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+             RowBox[{
+               RowBox[{
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+               RowBox[{"N1", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+       "Conjugate"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          RowBox[{"N0", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N1", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]]}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", "d", " ", 
+           SuperscriptBox["\[ExponentialE]", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+              SqrtBox[
+               RowBox[{
+                SuperscriptBox["N1", "2"], "-", 
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+           " ", "\[Pi]", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"N0", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+             RowBox[{"N1", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N0", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+             RowBox[{"N2", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]]}]}], ")"}], " ", 
+           SuperscriptBox["N0", "2"]}], 
+          RowBox[{"\[Lambda]", " ", 
+           SqrtBox[
+            RowBox[{
+             SuperscriptBox["N1", "2"], "-", 
+             RowBox[{
+              SuperscriptBox["N0", "2"], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N0", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]]}], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N0", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N1", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["N1", "2"], " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}], 
+             RowBox[{"N2", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]]}]], "-", 
+            RowBox[{"N1", " ", 
+             RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]], "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+               RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+               SuperscriptBox["N0", "3"]}], 
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{
+                   SuperscriptBox["N0", "2"], " ", 
+                   RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                  SuperscriptBox["N1", "2"]]}]]}]]}], "-", 
+            RowBox[{"N1", " ", 
+             RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N0", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N1", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N0", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["N0", "2"], " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+              RowBox[{"sin", "(", "\[Theta]", ")"}]}], 
+             RowBox[{"N1", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N0", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N1", "2"]]}]]}]], "-", 
+            RowBox[{"N0", " ", 
+             RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]], "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N0", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N1", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+               RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+               SuperscriptBox["N1", "2"]}], 
+              RowBox[{"N2", " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{
+                   SuperscriptBox["N1", "2"], " ", 
+                   RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                  SuperscriptBox["N2", "2"]]}]]}]]}], "-", 
+            RowBox[{
+             RowBox[{"sin", "(", "\[Theta]", ")"}], " ", "N1"}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], "2"]}]]}], 
+       ")"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+              TemplateBox[{
+                RowBox[{"(", 
+                  RowBox[{"d", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+               "Conjugate"]}], 
+             TemplateBox[{"\[Lambda]"},
+              "Conjugate"]]}]], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N0", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N1", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]},
+           "Conjugate"]}], 
+         RowBox[{
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"]}]], "+", "1"}], ")"}], " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[ExponentialE]", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+              SqrtBox[
+               RowBox[{
+                SuperscriptBox["N1", "2"], "-", 
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+           " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"N0", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+             RowBox[{"N1", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N0", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+             RowBox[{"N2", " ", 
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N0", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              SqrtBox[
+               RowBox[{"1", "-", 
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{
+                   SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                 SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+             RowBox[{"N1", " ", 
+              RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]], "+", "1"}],
+         ")"}], "2"]}], ")"}]}], "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      TemplateBox[{
+        RowBox[{"(", 
+          RowBox[{
+            FractionBox[
+             RowBox[{
+               RowBox[{"N0", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+               RowBox[{"N1", " ", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], 
+             RowBox[{
+               RowBox[{
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+               RowBox[{"N1", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+            FractionBox[
+             RowBox[{
+               SuperscriptBox["\[ExponentialE]", 
+                FractionBox[
+                 
+                 RowBox[{
+                  "4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+                   SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], 
+                 "\[Lambda]"]], " ", 
+               RowBox[{"(", 
+                 RowBox[{
+                   RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                   RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+             RowBox[{
+               RowBox[{
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+               RowBox[{"N1", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+       "Conjugate"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          RowBox[{"N0", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+          RowBox[{"N1", " ", 
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]]}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{
+           SqrtBox[
+            RowBox[{"1", "-", 
+             FractionBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               RowBox[{
+                SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+              SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+          RowBox[{"N1", " ", 
+           RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"2", " ", "\[ImaginaryI]", " ", "d", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+              TemplateBox[{
+                RowBox[{"(", 
+                  RowBox[{"d", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+               "Conjugate"]}], 
+             TemplateBox[{"\[Lambda]"},
+              "Conjugate"]]}]], " ", "\[Pi]", " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N0", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N1", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]},
+           "Conjugate"], " ", 
+          RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+          RowBox[{
+           SuperscriptBox["Conjugate", "\[Prime]",
+            MultilineFunction->None], "(", 
+           RowBox[{"d", " ", 
+            SqrtBox[
+             RowBox[{
+              SuperscriptBox["N1", "2"], "-", 
+              RowBox[{
+               SuperscriptBox["N0", "2"], " ", 
+               RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}], " ", 
+          SuperscriptBox["N0", "2"]}], 
+         RowBox[{
+          TemplateBox[{"\[Lambda]"},
+           "Conjugate"], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"], " ", 
+          SqrtBox[
+           RowBox[{
+            SuperscriptBox["N1", "2"], "-", 
+            RowBox[{
+             SuperscriptBox["N0", "2"], " ", 
+             RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}]], "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+              TemplateBox[{
+                RowBox[{"(", 
+                  RowBox[{"d", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+               "Conjugate"]}], 
+             TemplateBox[{"\[Lambda]"},
+              "Conjugate"]]}]], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N0", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N1", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]},
+           "Conjugate"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+               RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+               SuperscriptBox["N0", "3"]}], 
+              RowBox[{
+               SuperscriptBox["N1", "2"], " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{
+                   SuperscriptBox["N0", "2"], " ", 
+                   RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                  SuperscriptBox["N1", "2"]]}]]}]]}], "-", 
+            RowBox[{"N1", " ", 
+             RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{
+           SuperscriptBox["Conjugate", "\[Prime]",
+            MultilineFunction->None], "(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            TemplateBox[{
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+                  RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+             "Conjugate"], ")"}], "2"], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"]}]], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+               TemplateBox[{
+                 RowBox[{"(", 
+                   RowBox[{"d", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+                "Conjugate"]}], 
+              TemplateBox[{"\[Lambda]"},
+               "Conjugate"]]}]], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"N0", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                RowBox[{"N1", " ", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N1", "2"], " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+                  RowBox[{"sin", "(", "\[Theta]", ")"}]}], 
+                 RowBox[{"N2", " ", 
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]], "-", 
+                RowBox[{"N1", " ", 
+                 RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}]}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                FractionBox[
+                 RowBox[{
+                  SuperscriptBox["N0", "2"], " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+                  RowBox[{"sin", "(", "\[Theta]", ")"}]}], 
+                 RowBox[{"N1", " ", 
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]], "-", 
+                RowBox[{"N0", " ", 
+                 RowBox[{"sin", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"N1", " ", 
+                 RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                RowBox[{"N2", " ", 
+                 SqrtBox[
+                  RowBox[{"1", "-", 
+                   FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}]}], ")"}], " ", 
+           
+           RowBox[{
+            SuperscriptBox["Conjugate", "\[Prime]",
+             MultilineFunction->None], "(", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"N0", " ", 
+                RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+               RowBox[{"N1", " ", 
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                   SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"N1", " ", 
+                RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+               RowBox[{"N2", " ", 
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  FractionBox[
+                   RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                   SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]}], ")"}],
+          "/", 
+         RowBox[{"(", 
+          RowBox[{
+           TemplateBox[{
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+                 RowBox[{"N1", " ", 
+                   RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+            "Conjugate"], " ", 
+           TemplateBox[{
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+                 RowBox[{"N1", " ", 
+                   RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+            "Conjugate"]}], ")"}]}], "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"-", 
+            FractionBox[
+             RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+              TemplateBox[{
+                RowBox[{"(", 
+                  RowBox[{"d", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+               "Conjugate"]}], 
+             TemplateBox[{"\[Lambda]"},
+              "Conjugate"]]}]], " ", 
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N0", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N1", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+                RowBox[{"(", 
+                  RowBox[{
+                    RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]},
+           "Conjugate"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{
+               RowBox[{"cos", "(", "\[Theta]", ")"}], " ", 
+               RowBox[{"sin", "(", "\[Theta]", ")"}], " ", 
+               SuperscriptBox["N1", "2"]}], 
+              RowBox[{"N2", " ", 
+               SqrtBox[
+                RowBox[{"1", "-", 
+                 FractionBox[
+                  RowBox[{
+                   SuperscriptBox["N1", "2"], " ", 
+                   RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                  SuperscriptBox["N2", "2"]]}]]}]]}], "-", 
+            RowBox[{
+             RowBox[{"sin", "(", "\[Theta]", ")"}], " ", "N1"}]}], ")"}], " ", 
+          RowBox[{
+           SuperscriptBox["Conjugate", "\[Prime]",
+            MultilineFunction->None], "(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}], 
+         RowBox[{
+          TemplateBox[{
+            RowBox[{"(", 
+              RowBox[{
+                RowBox[{
+                  SqrtBox[
+                   RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+                RowBox[{"N1", " ", 
+                  RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+           "Conjugate"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            TemplateBox[{
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+                  RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+             "Conjugate"], ")"}], "2"]}]]}], ")"}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          RowBox[{
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{"-", 
+             FractionBox[
+              RowBox[{"4", " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+               TemplateBox[{
+                 RowBox[{"(", 
+                   RowBox[{"d", " ", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], "-", 
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], ")"}]},
+                "Conjugate"]}], 
+              TemplateBox[{"\[Lambda]"},
+               "Conjugate"]]}]], " ", 
+           TemplateBox[{
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"N0", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N1", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"N1", " ", 
+                    RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+                    RowBox[{"N2", " ", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], ")"}]},
+            "Conjugate"]}], 
+          RowBox[{
+           TemplateBox[{
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N0", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+                 RowBox[{"N1", " ", 
+                   RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+            "Conjugate"], " ", 
+           TemplateBox[{
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   SqrtBox[
+                    RowBox[{"1", "-", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox["N1", "2"], " ", 
+                    RowBox[{
+                    SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                    SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+                 RowBox[{"N1", " ", 
+                   RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]},
+            "Conjugate"]}]], "+", "1"}], ")"}], "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           FractionBox[
+            RowBox[{"4", " ", "\[ImaginaryI]", " ", "d", " ", "\[Pi]", " ", 
+             SqrtBox[
+              RowBox[{
+               SuperscriptBox["N1", "2"], "-", 
+               RowBox[{
+                SuperscriptBox["N0", "2"], " ", 
+                RowBox[{"sin", "(", "\[Theta]", ")"}]}]}]]}], "\[Lambda]"]], 
+          " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N0", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N1", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+            RowBox[{"N2", " ", 
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]]}]}], ")"}]}], 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N0", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N1", "2"]]}]], " ", "N0"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             SqrtBox[
+              RowBox[{"1", "-", 
+               FractionBox[
+                RowBox[{
+                 SuperscriptBox["N1", "2"], " ", 
+                 RowBox[{
+                  SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}], 
+                SuperscriptBox["N2", "2"]]}]], " ", "N2"}], "+", 
+            RowBox[{"N1", " ", 
+             RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]], "+", "1"}], 
+       ")"}]}], ")"}]}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.8945991147949038`*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"3efed493-4c34-480f-9c2e-dcf0952ae2e1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"v", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"d", "->", "2"}], ",", " ", 
+     RowBox[{"\[Lambda]", "->", "532"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Rs", "[", "\[Theta]", "]"}], "/.", "v"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Rp", "[", "\[Theta]", "]"}], "/.", "v"}], " ", "}"}], ",", 
+     " ", 
+     RowBox[{
+      RowBox[{"Abs", "[", 
+       RowBox[{"\[Beta]", "[", "\[Theta]", "]"}], "]"}], "/.", "v"}]}], "}"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", 
+     FractionBox["\[Pi]", "2"]}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", "->", 
+    RowBox[{"{", 
+     RowBox[{"Blue", ",", "Red"}], "}"}]}], ",", 
+   RowBox[{"AxesLabel", "->", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Angle/rad\>\"", ",", " ", "\"\<Reflection/%\>\""}], 
+     "}"}]}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+  "\"\<Desktop/uni_at_DIFI/materiale_corsi/laboratorio_3/project/figures/\
+3PHmodel.pdf\>\"", ",", "%"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.894595594294361*^9, 3.894595671356845*^9}, {
+  3.894595706929789*^9, 3.894595709911854*^9}, {3.894595793067078*^9, 
+  3.894595903096263*^9}, {3.894595959885386*^9, 3.894596102946579*^9}, {
+  3.894597524971073*^9, 3.894597553198*^9}},
+ CellLabel->"In[62]:=",ExpressionUUID->"634e6c91-5603-4cf1-b804-e4720368ce18"],
+
+Cell[BoxData[
+ FormBox[
+  GraphicsBox[{{{}, {}, 
+     TagBox[
+      {RGBColor[0, 0, 1], AbsoluteThickness[1.6], Opacity[1.], 
+       LineBox[CompressedData["
+1:eJwV1nk4VV0bBnBTqKhICslUEqkUUdSNfAkVJfEqiZIoRCIlUhkalJA3ZKpQ
+RBSZIyFEL1HnyJAhZDyHOHuT+FZ/7et37WvvtZ6117qfLWfvdtCBh4uLay03
+F9ffK2/pgk89GnY7BXYLwYvJwJqBt9qrIoA+rC3+6+msjSdbwk3BOSb73ps4
+m4MvIpmWOPSSMvch7hU7Tb8Jt4WRQYbrZeI7EtXCmUUnsE5Lb6kfcYrS0QSu
+TEc4vXitF0BcpsneZJ54Bs9r+KZvEH/bfaM8OdwNN0vVdW7+HU9ZSNm33B0d
+FbsE7xIHb/7qkVx0HleXbz4WQSy2PbHoU84FuM3M7YgmTtJz5qMzvNFQmpGa
+QLzBSH2fXKoPvuRox6YQF5nNPjBOvIyPGmkrMom/2IavjQv3xz+nlbPf/q1n
+ywatnsqrkBzXqftA7K0Z0eZdHgDZfDX3RmI+2KxJKrqOK9R7qz7iWv3yGo38
+G2gNsI8dI76/e61rbU4gApx7Hf8Qr9o/9uZXRjDaq2LixVsY+HHg8JGQtBCc
+u/FJcDVxukXR3MrUm5ivPjCjRqxlE7hnd+JtKJh8vWZKfPCsxLeH4fegKpY8
+7z6xkBZKowzDsH1oTeljYnaBu0hXZRgaN0Xy5BK/Kfmae6H8PlrqdNa2Eu+q
+TJyNL4rAWu1v/arfGFA0bDIb2BYJP8Nu9i7iBTXznmzJj0T6vM7r1sQNdc6G
+1TkPsEL3neFNYptm9bCxjH+RxNAxHCHWPezYrb3+IRTPiCUKtDKwmhmtHpT2
+EAGFQ9fkiQdbZ5mSqdEoWJHQ9w+xd0+1nEFiLFQ09BT/I74/fvR1VHgC8vfV
+Bze1MRC6LEanTDgRpYvfXZwi/pwdKKNxMBH1r3mFZNsZODJ4tHdVayIkZ/wk
+3Ihdjyx0Hx9Owk+l+w1iHQxE7jgdEr3kKSp47LL9vjPQ0mJ+ZpHFUySUu1Vn
+Eq/ywv7r0U/RuJMK+E6cmiku5iKfjAPbfdv0OxkolKlM0FVPwSjf640iXQx8
+55bP67d8hliLmAN13aS+eOGYo4+eYWJ/+n3+HgZOb5/ybex8huLM0556xOMe
+DfpFTs9h28ORKyDm++H36e7lNDgv/SCd9YMB5arWXo2EF5gyC4ot7mNAu9J4
+gf75LKzczl1nOsTAkuaU/zQjsnBO5+aGaOIf3TwPVF9noemBlUwP8V2uIhmJ
+X1kw6mlLvzjMQLe2igbbIxtaiYPn0kYYCHm18Hi8xyvsb3iWqcRm4GtCXe60
+ew7qYp6Jh02S/ZWpdJl9PwcHktSNh4ivltzQ7cvOgUhHuJAhh4F1rTofG8fI
+faOWHVwUA77iGZ3P3HMhlSVu7kMzoBAautDS/Q0sL77aG/SbgXOX9tu9PpcP
+0ZDBxIU8TBi76jwTDMvHT33XCC9iBXtlls3LfFi0tizuJv5qxH9FcDQfRpZ+
+KYW8TOyQePvQ5kwBFNsfmHjMY2JBvmqDwKlCuOZ1+vwWZCJ5UghHjxRDfcL6
+3oUlTPgNTAdmXyrGvNCOmjFiq/afdfwxxdiXyXfPVYQJocoK62xmMZLSDxQ4
+iTLhEenrxX+4BHXTCXdPiTGhu2U4I8vsLTQKX+pdWsGES77DXR6FMhjoitLz
+5ZgkHw7IcquXITsnIuYJMbtF59WcQRnGL2/p2iHPhOfvpV9nTpVh+PK4tacC
+E5d2lktTaWXgeerGPbCGiaCKVRlDm99h+F2Y/JgyE4kNjI/N+uUwls6mfTWY
+aP5pND/VvgJnHe+rBu5lghWt9L/rHhXQfWEprb2P1G8iEGB7rQKCb03ix4h1
+Myro5Y8rkBPTbX7clIl0d/wM6arAA8HPdw0OMnFtWv2D8/FKFL6Yt1fJiomN
+QrKBG45V4U1jylqbk0zc2sjhevNPNbY8d4nx8yPz9TZS6XOuhr6cstcZfyac
+Sh9ZiPtWw5Z2nLO6ysQe011pXvHVsLROlNx6jQkBtzBzzZ5qsDaGX6ADmbiR
+qZySf7YGXruEauNCyfdQtTUp8q9Fh8eQ+Zk4JtxVqh+UJdfhxtpGLCtlYvrE
+mcx21wbo9Cpw7Z7fAvuSw2Zhpz6j7EmGzmGrFpwYay4rC2mGoqlus1RBC+5s
+ynNLCfqKGQ0NJ6lV38BTlqd54xKZ95Vkd8fb3yCibPLp+8NveKfxxbVDuBV7
+EvSfsMPbsJlZumxlRCuWs+p2++d1YE7S8dC1TW2I+VDIzevUCaGGpuQYZht0
+pPXmZE92wad55Yu+gHaodC75ccWzG9bGL9WTDTuQ8Uz0dK5HD4yEMwR+CH+H
+b4dNk0rQD+Tm/yO8ZOI73HW0TOIje9HJrGrkPt+J6QQD+6GwPsyoijSrDHWi
+4VzMce/H/dB8ktgecaEL2wzlZ9uTfiIkbSLw5mwXav637ZnuowH0WO1auvJO
+N5Kzo7d1pw/CIO9fnzbVHixTWO987PkQ5ATOtdvX9eAzt+A1ieJh/H7z57Pu
+VTIPwfMpDTUjSDrx+MJTrV6sX7bE2b5yFMvnHpWvGeoF6y5HbMtXFkpO7JZQ
+ed0HheDgjW7ObETGhLxbdb4f3dat3/T72dhbJIsdW35iT2/TVK7rGBy+X972
+iX8AFz0cTouPjKGpLfF9XP0A9r+JNRb3GseW743Rr54OYnTG2ZeXM45ad6V9
+c85DpA8E5Lie/wX7si6DKqVhTJ/ecdzn9y+MReTMJYwOQ/rP/SPulyZwk+2/
+uffRCPoMb9cK8k3CoURr45TxKN4r1mHV7Un8Pm3/waRnFMZ3vxuLh07ivbHK
+7aO9o2iYHLdYdG8SK3JpibP9o6TvS5ydDZ8EX9DjB8FDo6DtHR92xExi0ymw
+X/4axfoEnrH4tEk8ZujfruRlIWr5tscytZNg7n8rNyfPgrNgCp/cfA7+y1vv
+es2GhY88IaG7FnLg69QU52DLwvo/TuKnhDlYVpypbGjHAmtMVSldhIMEQ0ur
+eQ4seLbmmmhIcrBNvWbA5SwLVzIrw41UyE+PWtUK1iUWwg71ynrs46DzttOB
+9CgWxvZ/eB5pyoFyoZiD1UMWDho935x3gIOMdNEC3hgWlu10MZix4MCl6soq
+izgWYtZOOgYd44CpfKKq+wkLT6f5Xsa4cTB9eHHVsywW8hJX73h/n4NN5SKe
+LdUsrJ4zuPwuggPzsrTd6rVkfBuHgtIHHAwUCV4O/cjCackUjeJoDsq2W/Fr
+f2JBMnLthtwkUq/d1shrTSz4BivLpJKftsA7VybL21nQd93EfbuRgySrZAW+
+MRYy68xws4mDJ11i3evGWZBScb8S/IWDudsLR/b9YmGiP3vqegsHn0L+9IZN
+spBst2Xct4uD9KtLD/JMsyBosbXHdYyD3wFx+kbcbHzS1qk8KELh3J+4WbX5
+bNzKv/B791IKSZFtuSnEhhov1bSXEXtbhksuYKNsg3y8ggSFHO8fBXPEr+UE
+vSdkKXC/iyoqFWLjoUCzUtQmCjVtHSbiS9iwuCFse2szhZjYRo0rxKLchg/8
+1CmMr0/S7SG+PV3A7ahFwXhRVd4LETb8RhK+aepSCPQtWa2xlI0TTWfutJhS
+mJqofSslzoasWXJ5/QEK2Wfm/etJ3FbXQb8zpyB9ffx2HfHhqgMOaZYUPid1
+1fosZ2NPgebOy7YUFnovjKpZwcaGBF72SjcKDZ7zlXdKsTEotUNRxJ3C3vg7
+L0OIUx96HZ13noLep4Z9n4llwweqR7worOtPbbJfycbSwP+S3vpRuJnF+nNR
+mg3aOdb8+F0KIiOPH/rIsHHv0hMB/zAKhaFysYXEirfSi+LCKRS8E7w5TWzx
+vEihNYpC7/PhNd6ybLzqb/1lkUBhdKXs0RNybBhRPameSRQsoznZscSd/MNH
+Ip5QSFnHYX8mXqw4874hlUKzreW6nfJsnD25MtIki8Lh+nm+Agps8Hqu3uP8
+isKEfNBSTeKY6+tnQnIomLnxhzsQ1zzWOVmVT+GT3JR+KbFi11F1vXcU1B5a
+uzisZqOEffKn7XsKXPW3Ne4QH+JyeeRXSeFaXVp3NvF1mSt8xTUUXvJmDU4R
+d9rENW/9TKG/ty3Ndw0b3i7JIRbNpL7z/hExxIuuZOh4fqVgJL3MNo94x6OS
+p9nfKMgGKMSPEDenV1o1tFFQEpIXEVAk9RTVC7E6KGw/JHNKhjjmW7vn+h7y
+/frX5O4lVhvsVTLppbBrYX6mHXH11EibUz8FToL1zQvEx+dzwkIGKOTxNxmE
+EFMrZg1Shyhc4O3vjCa+q8Q/VTlCob74qE0asaLWoowfLAoaxdMFBcQlhuJ2
+vOMUTEeDOR+ID1muWiY/QUH+yUfRL8RDpxRrdDkU9t8NXdRFfM1rwxVbmoLd
+hwcDQ8SSQVvV/KYpCNS+eDJJnP1gZ++jGfI+r1idWeI9ybuji2YpfF+ikjNv
+LVm/nP37vnHR0Nm1ZoEQsXfFYe4pHhpiKw/tFCFe1Hwsd/k8GocWXzNbRpzc
+c8ppqwCNRxwf3RXEOr9cpS3m09ATEVgkSdzM4914fiGNUr7J/L8+I+ofGC5M
+k/6xWO+veeSDt2UvpvF24eqUv8/HqN0b+U+ERqTzbP/f96vp/Zs0upSG1baz
+/KLE1WYJFsLiNCxltLmFiZ0ret8KrCDjO9caCxALa61X4pGkUT4mEcVFnJXu
+cX9GisZYGXcPTeo9KFMwzZGmYb7FWo1NPBE+d2JMhtT36/fVPuIo/t31Q3I0
+CqZKG1uJtS7d2dqnQEMmzF+hgbh15HNC5xoaZfvFvN4T+9lJzG9dS+OjtFVN
+LrHsF1uPL+toHNZYI51KfLJ42KBWlca9zMrKIGL+TVsyKzbS2C5iKvl3fzx/
+4rO8VI1G8tt6V3vi0Vv8g681aNS7Sy7fThw2u9c8U5NG4Z9E59XEWzwiip9t
+oyHdFVoiTHzxH9l7cTtoOGsutmsn+1ey/hT9L2jcLTyW/Z64RDfDLlyPRn/u
+La7nxDxK29WD/0eDnT8Wc474aezVuABDsn62g70HiQ0Xf+D3NaKRW7x9ozrx
+HY55y7l9NF7a2RX/IudrWaWLn7UFjZBu05JTxPlaOf2HLMl6hoRSusTWL6bN
+TP+h8aNdaaMkcXxEsIKBDY2D5dxRNeR8K9knVas60Pg+uAgriWu/9KspOdLw
+0VtgN0ryw8VoQ6y8E40T8n7+pcSvNhW5LHehobj5RPYxYp25ZlHuCzQWdO7s
+CyP50+Eh5fvbi0Z32IoBa+KAPrveyYs0VD7G9CsQV9WP5g360nDdpMl4RfLN
+9JGgTfMNGucbt/pVkPyz36aTmhpJQ/fLU8Ybkp9OI/WTbVE0Lglt3nua+FyS
+rYFoNDkPmrGXVhD7z7/e5RtHY0TwId8Fkr+PWmqkDqbQyKvzrl1F8vmrj2XY
+TB6NjQnu8zVIvrerDnSoFdI4Gum/5DPJ/x9dl1Qdi8l+pLgbXIh/GcXXNpbR
+cJlaeTGJ9Islkr18qTU0FlUxnafE2DAu9PA50Eqjcvm/9WdIPzrgylcd1E4j
+9b+8QxOkX1nJR4kXf6dxpNot4jKx462C14o/aHw5GKAZtJiNG9Zco7+HaQR6
+7ZW4I8zG2+lQ+5RZcj7P2+60Jv20MlMmu5VrCh2nW7U/CbJRZ589t4R3CnOT
+cWxd4tba5keXBabQKszxlxcg/SVGimG2ZAqKrQu3fuVjY25/xpog0SkMmH0e
+ATE/LzyLxKaQZTB89BkvG2Jn7EUUJabgmaVid4GHDSmZCdsjUmQ80SOcFtLv
+5ZsCM8Okp2BUPaa/g1g5ePmfSpkphKpwdidwkfOv/dzkt9wUkhXdeLiI/w8A
+ClhL
+        "]]},
+      Annotation[#, "Charting`Private`Tag$6662#1"]& ], 
+     TagBox[
+      {RGBColor[1, 0, 0], AbsoluteThickness[1.6], Opacity[1.], 
+       LineBox[CompressedData["
+1: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
+sHn5/xcV/wPdomqI
+        "]]},
+      Annotation[#, "Charting`Private`Tag$6662#2"]& ]}, {}},
+   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+   Axes->{True, True},
+   AxesLabel->{
+     FormBox[
+      TagBox["\"Angle/rad\"", HoldForm], TraditionalForm], 
+     FormBox[
+      TagBox["\"Reflection/%\"", HoldForm], TraditionalForm]},
+   AxesOrigin->{0, 0},
+   DisplayFunction->Identity,
+   Frame->{{False, False}, {False, False}},
+   FrameLabel->{{None, None}, {None, None}},
+   FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+   GridLines->{None, None},
+   GridLinesStyle->Directive[
+     GrayLevel[0.5, 0.4]],
+   ImagePadding->All,
+   Method->{
+    "DefaultBoundaryStyle" -> Automatic, 
+     "DefaultGraphicsInteraction" -> {
+      "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+       "Effects" -> {
+        "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+         "Droplines" -> {
+          "freeformCursorMode" -> True, 
+           "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
+     "DefaultMeshStyle" -> AbsolutePointSize[6], "ScalingFunctions" -> None, 
+     "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+         (Identity[#]& )[
+          Part[#, 1]], 
+         (Identity[#]& )[
+          Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+         (Identity[#]& )[
+          Part[#, 1]], 
+         (Identity[#]& )[
+          Part[#, 2]]}& )}},
+   PlotRange->
+    NCache[{{0, Rational[1, 2] Pi}, {0., 1.0095469689261305`}}, {{
+      0, 1.5707963267948966`}, {0., 1.0095469689261305`}}],
+   PlotRangeClipping->True,
+   PlotRangePadding->{{
+      Scaled[0.02], 
+      Scaled[0.02]}, {
+      Scaled[0.05], 
+      Scaled[0.05]}},
+   Ticks->{Automatic, Automatic}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.894595664407733*^9, 3.894595693681851*^9}, {
+   3.8945958125610647`*^9, 3.8945958221123962`*^9}, {3.894595885192114*^9, 
+   3.894595903553286*^9}, 3.8945959683074102`*^9, {3.894595998864903*^9, 
+   3.8945960433104153`*^9}, 3.8945961042887573`*^9, {3.894597528735189*^9, 
+   3.894597553527535*^9}},
+ CellLabel->"Out[63]=",ExpressionUUID->"dd848858-afda-42d1-ae13-61c87ada3cb0"],
+
+Cell[BoxData[
+ FormBox["\<\"Desktop/uni_at_DIFI/materiale_corsi/laboratorio_3/project/\
+figures/3PHmodel.pdf\"\>", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.894595664407733*^9, 3.894595693681851*^9}, {
+   3.8945958125610647`*^9, 3.8945958221123962`*^9}, {3.894595885192114*^9, 
+   3.894595903553286*^9}, 3.8945959683074102`*^9, {3.894595998864903*^9, 
+   3.8945960433104153`*^9}, 3.8945961042887573`*^9, {3.894597528735189*^9, 
+   3.894597553720564*^9}},
+ CellLabel->"Out[64]=",ExpressionUUID->"c8f36a06-02a7-40dc-8c1d-bc0872d09ca3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"r3PHp", "[", "\[Theta]", "]"}], "/.", "v"}]], "Input",
+ CellLabel->"In[17]:=",ExpressionUUID->"a8c411b7-968f-43bf-820b-ec18063f6dbb"],
+
+Cell[BoxData[
+ FormBox[
+  FractionBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"1.4607`", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+      SqrtBox[
+       RowBox[{"1", "-", 
+        RowBox[{"0.4686816405857753`", " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}]}]]}], 
+     RowBox[{
+      SqrtBox[
+       RowBox[{"1", "-", 
+        RowBox[{"0.4686816405857753`", " ", 
+         RowBox[{
+          SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}]}]], "+", 
+      RowBox[{"1.4607`", " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]], "+", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        FractionBox["2", "133"], " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+        SqrtBox[
+         RowBox[{"2.1336444900000004`", "\[VeryThinSpace]", "-", 
+          RowBox[{"sin", "(", "\[Theta]", ")"}]}]]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"4.136`", "\[VeryThinSpace]", "+", 
+           RowBox[{"0.010205`", " ", "\[ImaginaryI]"}]}], ")"}], " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"1.4607`", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"0.12472487190722815`", "\[VeryThinSpace]", "-", 
+              RowBox[{"0.0006154860089939312`", " ", "\[ImaginaryI]"}]}], 
+             ")"}], " ", 
+            RowBox[{
+             SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}]}]]}]}], 
+       ")"}]}], 
+     RowBox[{
+      RowBox[{"1.4607`", " ", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"0.12472487190722815`", "\[VeryThinSpace]", "-", 
+            RowBox[{"0.0006154860089939312`", " ", "\[ImaginaryI]"}]}], ")"}],
+           " ", 
+          RowBox[{
+           SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}]}]]}], "+", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"4.136`", "\[VeryThinSpace]", "+", 
+         RowBox[{"0.010205`", " ", "\[ImaginaryI]"}]}], ")"}], " ", 
+       RowBox[{"cos", "(", "\[Theta]", ")"}]}]}]]}], 
+   RowBox[{"1", "+", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{
+        FractionBox["2", "133"], " ", "\[ImaginaryI]", " ", "\[Pi]", " ", 
+        SqrtBox[
+         RowBox[{"2.1336444900000004`", "\[VeryThinSpace]", "-", 
+          RowBox[{"sin", "(", "\[Theta]", ")"}]}]]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1.4607`", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        SqrtBox[
+         RowBox[{"1", "-", 
+          RowBox[{"0.4686816405857753`", " ", 
+           RowBox[{
+            SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}]}]]}], ")"}], 
+      " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"4.136`", "\[VeryThinSpace]", "+", 
+           RowBox[{"0.010205`", " ", "\[ImaginaryI]"}]}], ")"}], " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}], "-", 
+        RowBox[{"1.4607`", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"0.12472487190722815`", "\[VeryThinSpace]", "-", 
+              RowBox[{"0.0006154860089939312`", " ", "\[ImaginaryI]"}]}], 
+             ")"}], " ", 
+            RowBox[{
+             SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}]}]]}]}], 
+       ")"}]}], 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        SqrtBox[
+         RowBox[{"1", "-", 
+          RowBox[{"0.4686816405857753`", " ", 
+           RowBox[{
+            SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}]}]], "+", 
+        RowBox[{"1.4607`", " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1.4607`", " ", 
+         SqrtBox[
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"0.12472487190722815`", "\[VeryThinSpace]", "-", 
+              RowBox[{"0.0006154860089939312`", " ", "\[ImaginaryI]"}]}], 
+             ")"}], " ", 
+            RowBox[{
+             SuperscriptBox["sin", "2"], "(", "\[Theta]", ")"}]}]}]]}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"4.136`", "\[VeryThinSpace]", "+", 
+           RowBox[{"0.010205`", " ", "\[ImaginaryI]"}]}], ")"}], " ", 
+         RowBox[{"cos", "(", "\[Theta]", ")"}]}]}], ")"}]}]]}]], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.8945956951447077`*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"5cccacdd-5270-4c7d-adfd-1147071990c8"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.894597517930078*^9, 
+  3.8945975209763117`*^9}},ExpressionUUID->"85d72fb9-4cc9-4c63-b8fc-\
+f9c92a7a0012"]
+}, Open  ]]
+},
+WindowSize->{808, 905},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"13.2 for Mac OS X x86 (64-bit) (November 18, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"84522564-1bd9-498b-8b94-36e8b945f37e"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 625, 17, 383, "Title",ExpressionUUID->"2f4d6d4f-b867-4695-861c-92b941ca1b82"],
+Cell[CellGroupData[{
+Cell[1230, 43, 157, 4, 26, "Input",ExpressionUUID->"20fc0b46-eacb-49e1-98d4-5d1a70337448"],
+Cell[1390, 49, 206, 3, 30, "Output",ExpressionUUID->"4d472954-80ff-4d06-98da-9bf13162cc7f"],
+Cell[1599, 54, 296, 6, 30, "Output",ExpressionUUID->"e948de36-2b58-44cf-a351-5295504cb3fa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1932, 65, 3476, 108, 303, "Input",ExpressionUUID->"e9405c08-ef37-4319-a01d-cbb41ac4d63b"],
+Cell[5411, 175, 946, 29, 89, "Output",ExpressionUUID->"ed66521c-70c6-4588-9d8b-4a811153766e"],
+Cell[6360, 206, 948, 29, 89, "Output",ExpressionUUID->"204f7f91-2b77-4249-93a0-275574d7e86c"],
+Cell[7311, 237, 946, 29, 89, "Output",ExpressionUUID->"616acc4d-4f0f-45dc-b918-037fab8b9e3d"],
+Cell[8260, 268, 946, 29, 89, "Output",ExpressionUUID->"16a389f5-7438-4ed5-b15f-502bc2211890"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9243, 302, 566, 14, 47, "Input",ExpressionUUID->"3ba7b9b3-39a7-4761-a90c-2e257114ba57"],
+Cell[9812, 318, 473, 13, 56, "Output",ExpressionUUID->"33a0783b-1fd4-4cae-a775-ec75b0ad2f1f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10322, 336, 1508, 39, 94, "Input",ExpressionUUID->"b4be705d-35c5-43c2-b4a6-0d6f50e71e38"],
+Cell[11833, 377, 4417, 133, 167, "Output",ExpressionUUID->"ac112eeb-31aa-494e-8f89-aa7de33dce76"],
+Cell[16253, 512, 4417, 133, 167, "Output",ExpressionUUID->"06004d49-3ade-4121-8904-8fa75211541e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20707, 650, 689, 16, 52, "Input",ExpressionUUID->"87129908-a4d9-4be6-9ddd-502025d09537"],
+Cell[21399, 668, 10405, 284, 185, "Output",ExpressionUUID->"3abc80fc-5678-4834-a7ec-f9a7246e8b39"],
+Cell[31807, 954, 10407, 284, 185, "Output",ExpressionUUID->"2968be83-0545-4c28-af9f-9a13c0969ad5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[42251, 1243, 276, 6, 30, "Input",ExpressionUUID->"6d2815d4-cd22-433a-abdc-09ebcdac977f"],
+Cell[42530, 1251, 91563, 2413, 2912, "Output",ExpressionUUID->"3efed493-4c34-480f-9c2e-dcf0952ae2e1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[134130, 3669, 1493, 41, 89, "Input",ExpressionUUID->"634e6c91-5603-4cf1-b804-e4720368ce18"],
+Cell[135626, 3712, 16411, 293, 221, "Output",ExpressionUUID->"dd848858-afda-42d1-ae13-61c87ada3cb0"],
+Cell[152040, 4007, 542, 8, 30, "Output",ExpressionUUID->"c8f36a06-02a7-40dc-8c1d-bc0872d09ca3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[152619, 4020, 168, 3, 30, "Input",ExpressionUUID->"a8c411b7-968f-43bf-820b-ec18063f6dbb"],
+Cell[152790, 4025, 4673, 129, 119, "Output",ExpressionUUID->"5cccacdd-5270-4c7d-adfd-1147071990c8"]
+}, Open  ]],
+Cell[157478, 4157, 154, 3, 30, "Input",ExpressionUUID->"85d72fb9-4cc9-4c63-b8fc-f9c92a7a0012"]
+}, Open  ]]
+}
+]
+*)
+
