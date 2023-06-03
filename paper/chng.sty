@@ -1,0 +1,25 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{chng}[2023/05/25 CHNG LaTeX]
+
+\newif\iffinal
+\DeclareOption{final}{\finaltrue}
+\finalfalse
+\ProcessOptions\relax
+
+\RequirePackage{ulem}
+\RequirePackage[dvipsnames]{xcolor}
+
+%% CHNG
+%% Tool to track changes in latex document
+%% \comment: add a useful note for future use
+%% \added: higlight new addition to previous text, waiting to be cross chechek
+%% \replaced: show changes that need to be replaced
+%% \delete: show deleted text in red
+
+\newcommand{\comment}[2][]{\iffinal\else{{\color{YellowOrange}[\uline{#2}\textsuperscript{#1}]}}\fi}
+
+\newcommand{\delete}[2][]{\iffinal\else{{\color{Red}\sout{#2}\textsuperscript{#1}}}\fi}
+
+\newcommand{\replace}[3][]{\iffinal#3\else{{\color{Blue}\sout{#2}~\textit{#3}\textsuperscript{#1}}}\fi}
+
+\newcommand{\added}[2][]{\iffinal#2\else{{\color{Green}\textit{#2}\textsuperscript{#1}}}\fi}

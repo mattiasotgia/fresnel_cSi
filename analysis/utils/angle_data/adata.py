@@ -50,11 +50,16 @@ class SingleRun:
             di.inverted for di in data
         ])
     
-    def plot(self, plot_asone=True, color='k', markersize=5, marker='o'):
+    def plot(self, plot_asone=True, color='k', markersize=5, marker='o', legend=None):
+        
+        if legend is not None:
+            legend_label = legend
+        else:
+            legend_label = f'Data ({self.polarization}-plane)'
         
         if plot_asone:
             plt.errorbar(self.angles, self.reflectance, yerr=self.reflectance_std, 
-                         color=color, ecolor=color, fmt=marker, mfc='w', markersize=markersize, label=f'Data ({self.polarization}-plane)')
+                         color=color, ecolor=color, fmt=marker, mfc='w', markersize=markersize, label=legend_label)
         else:
             angles = self.angles[self.IDs == False]
             reflectance = self.reflectance[self.IDs == False]
