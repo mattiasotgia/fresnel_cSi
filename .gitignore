@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/labview,vim,emacs,c,c++,root,python,jupyternotebooks,linux,windows,latex,visualstudiocode,macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=labview,vim,emacs,c,c++,root,python,jupyternotebooks,linux,windows,latex,visualstudiocode,macos
+# Created by https://www.toptal.com/developers/gitignore/api/c,c++,vim,root,emacs,latex,linux,macos,python,labview,windows,jupyternotebooks,visualstudiocode,images
+# Edit at https://www.toptal.com/developers/gitignore?templates=c,c++,vim,root,emacs,latex,linux,macos,python,labview,windows,jupyternotebooks,visualstudiocode,images
 
 ### C ###
 # Prerequisites
@@ -124,6 +124,79 @@ flycheck_*.el
 # network security
 /network-security.data
 
+
+### Images ###
+# JPEG
+*.jpg
+*.jpeg
+*.jpe
+*.jif
+*.jfif
+*.jfi
+
+# iPhone images
+*.heic
+*.HEIC
+
+# Illustrator images
+*.ai
+
+
+# JPEG 2000
+*.jp2
+*.j2k
+*.jpf
+*.jpx
+*.jpm
+*.mj2
+
+# JPEG XR
+*.jxr
+*.hdp
+*.wdp
+
+# Graphics Interchange Format
+*.gif
+
+# RAW
+*.raw
+
+# Web P
+*.webp
+
+# Portable Network Graphics
+*.png
+
+# Animated Portable Network Graphics
+*.apng
+
+# Multiple-image Network Graphics
+*.mng
+
+# Tagged Image File Format
+*.tiff
+*.tif
+
+# Scalable Vector Graphics
+*.svg
+*.svgz
+
+# Portable Document Format
+*.pdf
+
+# X BitMap
+*.xbm
+
+# BMP
+*.bmp
+*.dib
+
+# ICO
+*.ico
+
+# 3D Images
+*.3dm
+*.max
 
 ### JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks
@@ -671,6 +744,9 @@ poetry.toml
 # ruff
 .ruff_cache/
 
+# LSP config files
+pyrightconfig.json
+
 ### ROOT ###
 # ROOT Home Page : https://root.cern.ch/
 # ROOT Used by Experimental Physicists, not necessarily HEP
@@ -747,4 +823,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/labview,vim,emacs,c,c++,root,python,jupyternotebooks,linux,windows,latex,visualstudiocode,macos
+# End of https://www.toptal.com/developers/gitignore/api/c,c++,vim,root,emacs,latex,linux,macos,python,labview,windows,jupyternotebooks,visualstudiocode,images
