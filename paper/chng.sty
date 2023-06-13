@@ -6,7 +6,7 @@
 \finalfalse
 \ProcessOptions\relax
 
-\RequirePackage{ulem}
+\RequirePackage[normalem]{ulem}
 \RequirePackage[dvipsnames]{xcolor}
 
 %% CHNG
@@ -16,7 +16,7 @@
 %% \replaced: show changes that need to be replaced
 %% \delete: show deleted text in red
 
-\newcommand{\comment}[2][]{\iffinal\else{{\color{YellowOrange}[\uline{#2}\textsuperscript{#1}]}}\fi}
+\newcommand{\comment}[2][]{\iffinal\else{{\color{YellowOrange}[\textsf{\uline{#2}}\textsuperscript{#1}]}}\fi}
 
 \newcommand{\delete}[2][]{\iffinal\else{{\color{Red}\sout{#2}\textsuperscript{#1}}}\fi}
 

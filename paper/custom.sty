@@ -1,16 +1,19 @@
-\usepackage[italian]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{custom}[2023/06/06 CUSTOM LaTeX]
 
-\usepackage{physics}
-\usepackage{siunitx}
+\RequirePackage[italian]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
 
-\usepackage{graphicx}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[colorlinks,allcolors=Blue]{hyperref}
+\RequirePackage{physics}
+\RequirePackage{siunitx}
+
+\RequirePackage{graphicx}
+\RequirePackage[dvipsnames]{xcolor}
+\RequirePackage[colorlinks,allcolors=Blue]{hyperref}
 \graphicspath{{figures}}
 
-\usepackage[caption = false]{subfig}
+\RequirePackage[caption = false]{subfig}
 
 \def\bibsection{\section*{
 \refname
@@ -19,3 +22,6 @@
 \makeatletter
 \let\cat@comma@active\@empty
 \makeatother
+% \RequirePackage{fontspec}
+% \setmainfont[BoldFont={QTOptimum}]{Latin Modern Roman}
+% \RequirePackage{microtype}
