@@ -18,8 +18,8 @@
 
 \newcommand{\comment}[2][]{\iffinal\else{{\color{YellowOrange}[\textsf{\uline{#2}}\textsuperscript{#1}]}}\fi}
 
-\newcommand{\delete}[2][]{\iffinal\else{{\color{Red}\sout{#2}\textsuperscript{#1}}}\fi}
+\newcommand{\delete}[2][]{\iffinal\else{{\color{Red}\textsf{\sout{#2}}\textsuperscript{#1}}}\fi}
 
-\newcommand{\replace}[3][]{\iffinal#3\else{{\color{Blue}\sout{#2}~\textit{#3}\textsuperscript{#1}}}\fi}
+\newcommand{\replace}[3][]{\iffinal#3\else{{\color{Blue}\textsf{\sout{#2}~\textit{#3}}\textsuperscript{#1}}}\fi}
 
-\newcommand{\added}[2][]{\iffinal#2\else{{\color{Green}\textit{#2}\textsuperscript{#1}}}\fi}
+\newcommand{\added}[2][]{\iffinal#2\else{{\color{Green}\textsf{\textit{#2}}\textsuperscript{#1}}}\fi}
