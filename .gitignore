@@ -823,4 +823,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Blender tables
+*.blend
+*.blend1
+
 # End of https://www.toptal.com/developers/gitignore/api/c,c++,vim,root,emacs,latex,linux,macos,python,labview,windows,jupyternotebooks,visualstudiocode,images
